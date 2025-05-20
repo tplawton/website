@@ -12,8 +12,14 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
     <link rel="manifest" href="./assets/site.webmanifest" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"></script>
   </head>
   <body>
+    <div id="tsparticles" style="position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0;"></div>
+    <div id="vanta-bg"></div>
     <nav id="desktop-nav">
       <div class="logo">Thomas Lawton</div>
       <div>
@@ -43,11 +49,12 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Thomas Lawton profile picture" class="about-pic"/>
+        <img src="./assets/profile-pic.png" alt="Thomas Lawton profile picture" class="about-pic tilt"/>
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Thomas Lawton</h1>
+        <p><span id="typed"></span></p>
         <p class="section__text__p2"></p>
         <div class="btn-container">
           <button
@@ -62,13 +69,13 @@
         </div>
         <div id="socials-container">
           <img
-            src="./assets/linkedin.png"
+            src="./assets/linkedinwhite.png"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://www.linkedin.com/in/tplawton/'"
           />
           <img
-            src="./assets/github.png"
+            src="./assets/githubwhite.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://github.com/tplawton'"
@@ -84,7 +91,7 @@
           <img
             src="./assets/about-pic.png"
             alt="Profile picture"
-            class="about-pic"
+            class="about-pic tilt"
           />
         </div>
         <div class="about-details-container">
@@ -96,8 +103,8 @@
                 class="icon"
                 onclick="location.href='./#experience'"
               />
-              <h3>Experience</h3>
-              <p>Data Analysis <br />Machine Learning</p>
+              <h3 class = 'paratext'>Experience</h3>
+              <p class = 'paratext'>Data Analysis <br />Machine Learning</p>
             </div>
             <div class="details-container">
               <img
@@ -106,18 +113,18 @@
                 class="icon"
                 onclick="location.href='https://www.bu.edu/cs/'"
               />
-              <h3>Education</h3>
-              <p>B.A.<br />Computer Science</p>
+              <h3 class = 'paratext'>Education</h3>
+              <p class = 'paratext'>B.A.<br />Computer Science</p>
             </div>
           </div>
           <div class="text-container">
-            <p>
+            <p class ='paratext'>
               I'm a recent graduate from Boston University with a B.A. in Computer Science, where I developed a strong foundation in data science and machine learning through both academic coursework and hands-on projects. My work includes chatbot evaluation with LLMs, mathematical problem-solving with AI, and predictive modeling in sports analytics.
               Professionally, I've contributed as an AI Trainer at Outlier AI, where I refined large language models by identifying vulnerabilities in generated code. I also served as a programming tutor at Boston University's Education Resource Center, where I helped students strengthen their Python skills through project-based learning.
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/arrowwhite.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
@@ -133,52 +140,52 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>Pandas</h3>
+                  <h3 class = 'paratext'>Pandas</h3>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>Excel</h3>
+                  <h3 class = 'paratext'>Excel</h3>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>PyTorch</h3>
+                  <h3 class = 'paratext'>PyTorch</h3>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>SQL</h3>
+                  <h3 class = 'paratext'>SQL</h3>
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>LLMs</h3>
+                  <h3 class = 'paratext'>LLMs</h3>
                 </div>
               </article>
             </div>
@@ -188,45 +195,45 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>Python</h3>
+                  <h3 class = 'paratext'>Python</h3>
                   
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>JavaScript</h3>
+                  <h3 class = 'paratext'>JavaScript</h3>
                   
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>C++</h3>
+                  <h3 class = 'paratext'>C++</h3>
                   
                 </div>
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./assets/check.png"
                   alt="Experience icon"
                   class="icon"
                 />
                 <div>
-                  <h3>Java</h3>
+                  <h3 class = 'paratext'>Java</h3>
                   
                 </div>
               </article>
@@ -235,7 +242,7 @@
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/arrowwhite.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
@@ -251,7 +258,7 @@
               <img
                 src="./assets/LMSYS.png"
                 alt="LMSYS"
-                class="project-img"
+                class="project-img tilt"
               />
             </div>
             <h2 class="experience-sub-title project-title">LMSYS ChatBot Preference Prediction</h2>
@@ -260,7 +267,7 @@
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/tplawton/LMSYS-ChatBot-Preference-Prediction'"
               >
-                Github
+                <p class = 'paratext'>Github</p>
               </button>
             </div>
           </div>
@@ -269,7 +276,7 @@
               <img
                 src="./assets/AIMO3.png"
                 alt="AIMO"
-                class="project-img"
+                class="project-img tilt"
               />
             </div>
             <h2 class="experience-sub-title project-title">Artificial Intelligence Math Olympiad</h2>
@@ -278,7 +285,7 @@
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/tplawton/AI-Math-Olympiad'"
               >
-                Github
+                <p class = 'paratext'>Github</p>
               </button>
             </div>
           </div>
@@ -287,7 +294,7 @@
               <img
                 src="./assets/basketball.png"
                 alt="NBA Stats"
-                class="project-img"
+                class="project-img tilt"
               />
             </div>
             <h2 class="experience-sub-title project-title">NBA Player Performance Predictor</h2>
@@ -296,14 +303,14 @@
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/tplawton/NBA_Player_Performance_Predictor'"
               >
-                Github
+                <p class = 'paratext'>Github</p>
               </button>
             </div>
           </div>
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./assets/arrowwhite.png"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
@@ -315,7 +322,7 @@
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
-            src="./assets/email.png"
+            src="./assets/emailwhite.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
@@ -323,7 +330,7 @@
         </div>
         <div class="contact-info-container">
           <img
-            src="./assets/linkedin.png"
+            src="./assets/linkedinwhite.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
@@ -344,5 +351,32 @@
       </nav>
     </footer>
     <script src="script.js"></script>
+    <script>
+    var typed = new Typed("#typed", {
+      strings: ["Data Analyst", "AI Enthusiast", "Boston University Graduate"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      backDelay: 2000,
+      loop: true
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"></script>
+  <script>
+    VANTA.WAVES({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x111111,
+      shininess: 50,
+      waveHeight: 20,
+      waveSpeed: 1,
+      zoom: 1
+    })
+  </script>
   </body>
 </html>

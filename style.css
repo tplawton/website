@@ -11,6 +11,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,6 +19,7 @@ html {
 p {
   color: rgb(85, 85, 85);
 }
+
 
 /* TRANSITION */
 
@@ -33,11 +35,13 @@ nav,
   display: flex;
 }
 
+
 nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
 }
+
 
 .nav-links {
   gap: 2rem;
@@ -46,7 +50,7 @@ nav {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -55,11 +59,12 @@ a:hover {
   color: grey;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: rgb(147, 59, 59);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: white;
 }
 
 .logo:hover {
@@ -109,7 +114,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: white;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -197,6 +202,7 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  color: white
 }
 
 #socials-container {
@@ -231,18 +237,22 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: white 0.1rem solid;
+  color: white;
+  background: none;
 }
 
 .btn-color-1:hover,
 .btn-color-2:hover {
   cursor: pointer;
+  transform: scale(1.05);
 }
 
-.btn-color-1,
+.btn-color-1-hover,
 .btn-color-2:hover {
-  background: rgb(53, 53, 53);
+  background: black;
   color: white;
+  transform: scale(1.05);
 }
 
 .btn-color-1:hover {
@@ -296,10 +306,10 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: black;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: white 0.1rem solid;
+  border-color: white;
   text-align: center;
 }
 
@@ -314,6 +324,19 @@ section {
   margin: auto 0;
 }
 
+.section__text__p1 {
+  color: white
+}
+
+.paratext {
+  color: white
+}
+
+#typed {
+  color: white; /* Change to any color you want */
+}
+
+
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -321,7 +344,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: white;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -360,8 +383,8 @@ article .icon {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: white;
+  background: black;
 }
 
 .project-img {
@@ -372,12 +395,13 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: white;
 }
 
 .project-btn {
   color: black;
-  border-color: rgb(163, 163, 163);
+  border-color: white;
+  
 }
 
 /* CONTACT */
@@ -430,3 +454,14 @@ footer {
 footer p {
   text-align: center;
 }
+
+#vanta-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
