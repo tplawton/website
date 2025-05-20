@@ -7,6 +7,11 @@
     <title>Thomas Lawton</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -38,16 +43,16 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Thomas Lawton profile picture" />
+        <img src="./assets/profile-pic.png" alt="Thomas Lawton profile picture" class="about-pic"/>
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Thomas Lawton</h1>
-        <p class="section__text__p2">Data Analyst</p>
+        <p class="section__text__p2"></p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./assets/ThomasLawtonResume.pdf')"
           >
             Download CV
           </button>
@@ -86,31 +91,29 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./assets/experience.png"
+                src="./assets/data2.png"
                 alt="Experience icon"
                 class="icon"
+                onclick="location.href='./#experience'"
               />
               <h3>Experience</h3>
               <p>Data Analysis <br />Machine Learning</p>
             </div>
             <div class="details-container">
               <img
-                src="./assets/education.png"
+                src="./assets/BU.png"
                 alt="Education icon"
                 class="icon"
+                onclick="location.href='https://www.bu.edu/cs/'"
               />
               <h3>Education</h3>
-              <p>B.A. Bachelors Degree<br />Computer Science</p>
+              <p>B.A.<br />Computer Science</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-              I am a recent graduate from Boston University with a B.A. in Computer Science. 
-              I have a strong foundation in Data Science and Machine Learning, gained through hands-on experience with projects like X and Y. 
-              With experience in both academic and professional settings, I have developed a deep understanding of data-driven analysis, supported by skills in Python, SQL, and various machine learning frameworks.
-              My practical experience includes roles as an IT Service Associate, where I managed technical support and troubleshooting, and as a Programming Tutor, where I guided students in mastering Python. 
-              I am passionate about leveraging my skills to uncover insights and drive decisions in data-centric environments.
-          </div>
+              I'm a recent graduate from Boston University with a B.A. in Computer Science, where I developed a strong foundation in data science and machine learning through both academic coursework and hands-on projects. My work includes chatbot evaluation with LLMs, mathematical problem-solving with AI, and predictive modeling in sports analytics.
+              Professionally, I've contributed as an AI Trainer at Outlier AI, where I refined large language models by identifying vulnerabilities in generated code. I also served as a programming tutor at Boston University's Education Resource Center, where I helped students strengthen their Python skills through project-based learning.
         </div>
       </div>
       <img
@@ -136,7 +139,6 @@
                 />
                 <div>
                   <h3>Pandas</h3>
-                  <p>Experienced</p>
                 </div>
               </article>
               <article>
@@ -147,7 +149,6 @@
                 />
                 <div>
                   <h3>Excel</h3>
-                  <p>Experienced</p>
                 </div>
               </article>
               <article>
@@ -157,8 +158,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Tableau</h3>
-                  <p>Intermediate</p>
+                  <h3>PyTorch</h3>
                 </div>
               </article>
               <article>
@@ -169,7 +169,6 @@
                 />
                 <div>
                   <h3>SQL</h3>
-                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -180,18 +179,6 @@
                 />
                 <div>
                   <h3>LLMs</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Neural Networks</h3>
-                  <p>Intermediate</p>
                 </div>
               </article>
             </div>
@@ -207,7 +194,7 @@
                 />
                 <div>
                   <h3>Python</h3>
-                  <p>Experienced</p>
+                  
                 </div>
               </article>
               <article>
@@ -218,7 +205,7 @@
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Intermediate</p>
+                  
                 </div>
               </article>
               <article>
@@ -229,7 +216,7 @@
                 />
                 <div>
                   <h3>C++</h3>
-                  <p>Intermediate</p>
+                  
                 </div>
               </article>
               <article>
@@ -240,7 +227,7 @@
                 />
                 <div>
                   <h3>Java</h3>
-                  <p>Intermediate</p>
+                  
                 </div>
               </article>
             </div>
@@ -262,72 +249,54 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
-                alt="Project 1"
+                src="./assets/LMSYS.png"
+                alt="LMSYS"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">LMSYS ChatBot Preference Prediction</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/tplawton/LMSYS-ChatBot-Preference-Prediction'"
               >
                 Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
               </button>
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
-                alt="Project 2"
+                src="./assets/AIMO3.png"
+                alt="AIMO"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Artificial Intelligence Math Olympiad</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/tplawton/AI-Math-Olympiad'"
               >
                 Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
               </button>
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-3.png"
-                alt="Project 3"
+                src="./assets/basketball.png"
+                alt="NBA Stats"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class="experience-sub-title project-title">NBA Player Performance Predictor</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/tplawton/NBA_Player_Performance_Predictor'"
               >
                 Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
               </button>
             </div>
           </div>
@@ -373,7 +342,6 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Thomas Lawton. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
